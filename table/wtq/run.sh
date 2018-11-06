@@ -42,12 +42,12 @@ SPLIT_DIR=$INPUT_DIR"data_split_1/"
 python ../experiment.py \
        --output_dir=$DATA_DIR$OUTPUT \
        --experiment_name=$NAME \
-       --n_actors=30 \
+       --n_actors=25 \
        --dev_file=$SPLIT_DIR"dev_split.jsonl" \
        --train_shard_dir=$SPLIT_DIR \
        --train_shard_prefix="train_split_shard_90-" \
        --shard_start=0 \
-       --shard_end=90 \
+       --shard_end=75 \
        --load_saved_programs \
        --saved_program_file=$DATA_DIR"processed_input/all_train_saved_programs.json" \
        --embedding_file=$DATA_DIR"raw_input/wikitable_glove_embedding_mat.npy" \
@@ -81,9 +81,9 @@ python ../experiment.py \
        --min_replay_weight=0.1 \
        --truncate_replay_buffer_at_n=$TRUNCATE_AT_N \
        --train_use_gpu \
-       --train_gpu_id=0 \
+       --train_gpu_id=1 \
        --eval_use_gpu \
-       --eval_gpu_id=1 \
+       --eval_gpu_id=2 \
        --max_n_mem=60 \
        --max_n_valid_indices=60 \
        --entropy_reg_coeff=0.01 \

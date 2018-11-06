@@ -49,12 +49,12 @@ SPLIT_DIR=$INPUT_DIR
 python ../experiment.py \
        --output_dir=$DATA_DIR$OUTPUT \
        --experiment_name=$NAME \
-       --n_actors=30 \
+       --n_actors=5 \
        --dev_file=$SPLIT_DIR"dev_split.jsonl" \
        --train_shard_dir=$SPLIT_DIR \
        --train_shard_prefix="train_split_shard_30-" \
        --shard_start=0 \
-       --shard_end=30 \
+       --shard_end=25 \
        --load_saved_programs \
        --saved_program_file=$INPUT_DIR"all_train_saved_programs-1k_5.json" \
        --embedding_file=$DATA_DIR"raw_input/wikisql_glove_embedding_mat.npy" \
