@@ -49,7 +49,7 @@ SPLIT_DIR=$INPUT_DIR
 python ../experiment.py \
        --output_dir=$DATA_DIR$OUTPUT \
        --experiment_name=$NAME \
-       --n_actors=5 \
+       --n_actors=25 \
        --dev_file=$SPLIT_DIR"dev_split.jsonl" \
        --train_shard_dir=$SPLIT_DIR \
        --train_shard_prefix="train_split_shard_30-" \
