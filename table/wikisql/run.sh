@@ -56,14 +56,14 @@ python ../experiment.py \
        --shard_start=0 \
        --shard_end=30 \
        --load_saved_programs \
-       --saved_program_file=$INPUT_DIR"all_train_saved_programs-1k_5.json" \
+       --saved_program_file=$INPUT_DIR"heuristic_train.json" \
        --embedding_file=$DATA_DIR"raw_input/wikisql_glove_embedding_mat.npy" \
        --vocab_file=$DATA_DIR"raw_input/wikisql_glove_vocab.json" \
        --table_file=$INPUT_DIR"tables.jsonl" \
        --en_vocab_file=$INPUT_DIR"en_vocab_min_count_5.json" \
        --save_every_n=10 \
-       --n_explore_samples=1 \
-       --n_extra_explore_for_hard=9 \
+       --n_explore_samples=0 \
+       --n_extra_explore_for_hard=0 \
        --use_cache \
        --batch_size=$BS \
        --dropout=0.0 \
